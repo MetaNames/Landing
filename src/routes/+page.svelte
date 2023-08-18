@@ -1,3 +1,7 @@
+<script>
+	import OpenAppButton from './OpenAppButton.svelte';
+</script>
+
 <div class="hero-primary">
 	<div class="content">
 		<h1>Meta Names</h1>
@@ -8,6 +12,9 @@
 	<div class="content">
 		<h2>The official Partisia Naming System</h2>
 		<h5>Decentralised naming for wallets, social, websites</h5>
+		<p>
+			<OpenAppButton color="primary" variant="raised" />
+		</p>
 	</div>
 </div>
 
