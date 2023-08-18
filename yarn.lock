@@ -1858,6 +1858,11 @@ svelte-preprocess@^5.0.4:
     sorcery "^0.11.0"
     strip-indent "^3.0.0"
 
+svelte-typewriter@^3.1.6:
+  version "3.1.6"
+  resolved "https://registry.yarnpkg.com/svelte-typewriter/-/svelte-typewriter-3.1.6.tgz#3c0155760b4219f9e85bccf1baf36f4b90df4016"
+  integrity sha512-KmY0IWfq6RhTosfLMkZwmBwvwjIKh72jZnWE2taBivtfJJfvBAIrJ3oByObDzisnwUDqyV+ynQZP27SK5UUygg==
+
 svelte2tsx@^0.6.15:
   version "0.6.20"
   resolved "https://registry.yarnpkg.com/svelte2tsx/-/svelte2tsx-0.6.20.tgz#58f1d129ae908cf29debe10888402bd1822e69a1"
@@ -1947,6 +1952,11 @@ undici@~5.23.0:
   integrity sha512-1D7w+fvRsqlQ9GscLBwcAJinqcZGHUKjbOmXdlE/v8BvEGXjeWAax+341q44EuTcHXXnfyKNbKRq4Lg7OzhMmg==
   dependencies:
     busboy "^1.6.0"
+
+unique-names-generator@^4.7.1:
+  version "4.7.1"
+  resolved "https://registry.yarnpkg.com/unique-names-generator/-/unique-names-generator-4.7.1.tgz#966407b12ba97f618928f77322cfac8c80df5597"
+  integrity sha512-lMx9dX+KRmG8sq6gulYYpKWZc9RlGsgBR6aoO8Qsm3qvkSJ+3rAymr+TnV8EDMrIrwuFJ4kruzMWM/OpYzPoow==
 
 uri-js@^4.2.2:
   version "4.4.1"
