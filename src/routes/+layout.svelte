@@ -1,0 +1,33 @@
+<script lang="ts">
+	import IconButton from '@smui/icon-button';
+	import Section from '@smui/top-app-bar/src/Section.svelte';
+	import TopAppBar, { AutoAdjust, Row, Title } from '@smui/top-app-bar';
+
+	let topAppBar: TopAppBar;
+</script>
+
+<TopAppBar bind:this={topAppBar} variant="standard">
+	<Row>
+		<Section>
+			<IconButton class="material-icons">menu</IconButton>
+			<Title>
+				<a class="home" href="/">Meta Names</a>
+			</Title>
+		</Section>
+
+		<Section>
+			<slot name="quick-links" />
+		</Section>
+	</Row>
+</TopAppBar>
+
+<AutoAdjust {topAppBar}>
+	<slot />
+</AutoAdjust>
+
+<style>
+	.home {
+		color: var(--mdc-theme-on-primary);
+		text-decoration: none;
+	}
+</style>
