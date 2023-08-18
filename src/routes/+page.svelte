@@ -1,19 +1,45 @@
-<script>
+<script lang="ts">
 	import OpenAppButton from './OpenAppButton.svelte';
+
+	import Typewriter from 'svelte-typewriter';
+	import RandomMetaName from './RandomMetaName.svelte';
+	import Button from '@smui/button/src/Button.svelte';
+	import { Icon } from '@smui/icon-button';
+
+	let randomMetaName: RandomMetaName;
 </script>
 
 <div class="hero-primary">
 	<div class="content">
 		<h1>Meta Names</h1>
-		<h5>The only name you need</h5>
+		<Typewriter>
+			<h5>The only name you need</h5>
+		</Typewriter>
 	</div>
 </div>
 <div class="hero-secondary">
 	<div class="content">
-		<h2>The official Partisia Naming System</h2>
-		<h5>Decentralised naming for wallets, social, websites</h5>
+		<h2>The official Partisia Name System</h2>
+		<h5>The decentralised naming system for wallets, social, websites</h5>
 		<p>
 			<OpenAppButton color="primary" variant="raised" />
+		</p>
+	</div>
+</div>
+<div class="hero-primary">
+	<div class="content">
+		<h2>Generate your name</h2>
+		<p>
+			<span>What about</span>
+			<b><RandomMetaName bind:this={randomMetaName} /></b>
+			<span>?</span>
+		</p>
+		<p>
+			<OpenAppButton color="secondary" variant="raised" />
+			<Button color="secondary" variant="raised" on:click={() => randomMetaName.regenerate()}>
+				<Icon class="material-icons icon-on-primary">refresh</Icon>
+				Regenerate
+			</Button>
 		</p>
 	</div>
 </div>
