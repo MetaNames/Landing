@@ -3,6 +3,9 @@
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
+		"prepare": "yarn run smui-theme-light && yarn run smui-theme-dark",
+		"smui-theme-light": "smui-theme compile static/smui.css -i src/theme",
+		"smui-theme-dark": "smui-theme compile static/smui-dark.css -i src/theme/dark",
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
@@ -14,6 +17,7 @@
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.28.1",
+		"@smui/button": "^7.0.0-beta.14",
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/kit": "^1.20.4",
 		"@typescript-eslint/eslint-plugin": "^5.45.0",
@@ -23,6 +27,7 @@
 		"eslint-plugin-svelte": "^2.30.0",
 		"prettier": "^2.8.0",
 		"prettier-plugin-svelte": "^2.10.1",
+		"smui-theme": "^7.0.0-beta.14",
 		"svelte": "^4.0.5",
 		"svelte-check": "^3.4.3",
 		"tslib": "^2.4.1",
