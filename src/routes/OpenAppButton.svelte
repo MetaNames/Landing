@@ -1,6 +1,8 @@
 <script lang="ts">
 	import Button, { Icon } from '@smui/button';
 
+	import { metaNamesUrl} from '$lib';
+
 	import '../styles/app.scss';
 
 	export let klass: string = '';
@@ -10,7 +12,7 @@
 	const iconClasses = variant === 'text' ? ' icon-on-primary' : '';
 </script>
 
-<Button class={klass} {color} {variant} href="https://app.metanames.io" target="_blank">
+<Button class={klass} {color} {variant} href="{metaNamesUrl}" target="_blank">
 	<Icon class="material-icons {iconClasses}">open_in_new</Icon>
 	Open App
 </Button>
