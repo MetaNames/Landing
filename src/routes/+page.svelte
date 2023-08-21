@@ -6,27 +6,21 @@
 	import Button from '@smui/button/src/Button.svelte';
 	import { Icon } from '@smui/icon-button';
 
+	import '../styles/app.scss';
+
 	let randomMetaName: RandomMetaName;
 </script>
 
 <div class="hero-primary">
 	<div class="content">
-		<h1>Meta Names</h1>
+		<h2>The official Name System for Partisia Blockchain</h2>
 		<Typewriter>
-			<h5>The only name you need</h5>
+			<h5>The decentralised naming system for wallets, social, websites, and more!</h5>
 		</Typewriter>
+		<OpenAppButton color="primary" klass="btn-primary-on-hero" variant="outlined" />
 	</div>
 </div>
 <div class="hero-secondary">
-	<div class="content">
-		<h2>The official Partisia Name System</h2>
-		<h5>The decentralised naming system for wallets, social, websites</h5>
-		<p>
-			<OpenAppButton color="primary" variant="raised" />
-		</p>
-	</div>
-</div>
-<div class="hero-primary">
 	<div class="content">
 		<h2>Generate your name</h2>
 		<p>

@@ -3,11 +3,14 @@
 
 	import '../styles/app.scss';
 
+	export let klass: string = '';
 	export let color: 'primary' | 'secondary' = 'primary';
-	export let variant: 'text' | 'raised' = 'text';
+	export let variant: 'text' | 'raised' | 'outlined' = 'text';
+
+	const iconClasses = variant === 'text' ? ' icon-on-primary' : '';
 </script>
 
-<Button {color} {variant} href="https://app.metanames.io" target="_blank">
-	<Icon class="material-icons icon-on-primary">open_in_new</Icon>
+<Button class={klass} {color} {variant} href="https://app.metanames.io" target="_blank">
+	<Icon class="material-icons {iconClasses}">open_in_new</Icon>
 	Open App
 </Button>
