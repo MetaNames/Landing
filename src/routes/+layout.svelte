@@ -2,7 +2,9 @@
 	import IconButton from '@smui/icon-button';
 	import Section from '@smui/top-app-bar/src/Section.svelte';
 	import TopAppBar, { AutoAdjust, Row, Title } from '@smui/top-app-bar';
+
 	import OpenAppButton from './OpenAppButton.svelte';
+	import Footer from './Footer.svelte';
 
 	let topAppBar: TopAppBar;
 </script>
@@ -28,6 +30,7 @@
 
 <AutoAdjust {topAppBar}>
 	<slot />
+	<Footer />
 </AutoAdjust>
 
 <style>
