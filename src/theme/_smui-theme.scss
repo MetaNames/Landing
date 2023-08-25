@@ -1,8 +1,10 @@
 @use 'sass:color';
 
+@use './colors.scss';
+
 @use '@material/theme/color-palette';
-@use '@material/theme/index' as theme with ($primary: #6849fe,
-  $secondary: #676778,
+@use '@material/theme/index' as theme with ($primary: colors.$primary,
+  $secondary: colors.$secondary,
   $surface: #fff,
   $background: #fff,
   $error: color-palette.$red-900);
