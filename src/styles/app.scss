@@ -1,7 +1,19 @@
-.btn-primary-on-hero {
+@use 'sass:color';
+@use '../theme/colors.scss';
+
+.btn-primary-on-card {
   background-color: var(--mdc-theme-on-primary);
 }
 
 .icon-on-primary {
   color: var(--mdc-theme-on-primary) !important;
+}
+
+.card-primary {
+  color: var(--mdc-theme-text-primary-on-dark);
+  background-color: var(--mdc-theme-primary);
+}
+
+.card-secondary {
+  background-color: var(--mdc-theme-background);
 }

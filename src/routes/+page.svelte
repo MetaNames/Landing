@@ -11,17 +11,17 @@
 	let randomMetaName: RandomMetaName;
 </script>
 
-<div class="hero-primary">
+<div class="card-primary">
 	<div class="content">
 		<h1>Meta Names</h1>
 		<Typewriter>
 			<h5>The official Name System for Partisia Blockchain</h5>
 		</Typewriter>
-		<OpenAppButton color="primary" klass="btn-primary-on-hero" variant="outlined" />
+		<OpenAppButton color="primary" klass="btn-primary-on-card" variant="outlined" />
 	</div>
 </div>
 
-<div class="hero-secondary">
+<div class="card-secondary">
 	<div class="content">
 		<h2>The only name you need for seamless experiences</h2>
 		<h5>
@@ -36,7 +36,7 @@
 	</div>
 </div>
 
-<div class="hero-primary">
+<div class="card-primary">
 	<div class="content">
 		<h2>Generate your name</h2>
 		<p>
@@ -45,9 +45,14 @@
 			<span>?</span>
 		</p>
 		<p>
-			<OpenAppButton color="secondary" variant="raised" />
-			<Button color="secondary" variant="raised" on:click={() => randomMetaName.regenerate()}>
-				<Icon class="material-icons icon-on-primary">refresh</Icon>
+			<OpenAppButton color="primary" variant="outlined" klass="btn-primary-on-card" />
+			<Button
+				class="btn-primary-on-card"
+				color="primary"
+				variant="outlined"
+				on:click={() => randomMetaName.regenerate()}
+			>
+				<Icon class="material-icons">refresh</Icon>
 				Regenerate
 			</Button>
 		</p>
@@ -64,14 +69,5 @@
 		@media only screen and (max-width: 600px) {
 			padding: 10%;
 		}
-	}
-
-	.hero-primary {
-		color: var(--mdc-theme-text-primary-on-dark);
-		background-color: var(--mdc-theme-primary);
-	}
-
-	.hero-secondary {
-		background-color: var(--mdc-theme-background);
 	}
 </style>
