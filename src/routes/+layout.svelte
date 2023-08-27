@@ -8,6 +8,10 @@
 	let topAppBar: TopAppBar;
 </script>
 
+<svelte:head>
+	<title>Meta Names</title>
+</svelte:head>
+
 <TopAppBar bind:this={topAppBar} variant="standard">
 	<Row>
 		<Section>
