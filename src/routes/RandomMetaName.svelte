@@ -14,7 +14,7 @@
 		return uniqueNamesGenerator(customConfig);
 	};
 
-	let generatedName = generateRandomName();
+	export let generatedName = generateRandomName();
 
 	export const regenerate = () => {
 		generatedName = generateRandomName();

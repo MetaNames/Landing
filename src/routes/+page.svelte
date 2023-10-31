@@ -9,6 +9,8 @@
 	import '../styles/app.scss';
 
 	let randomMetaName: RandomMetaName;
+
+	let generatedName: string;
 </script>
 
 <div class="card-primary">
@@ -41,11 +43,17 @@
 		<h2>Generate your name</h2>
 		<p>
 			<span>What about</span>
-			<b><RandomMetaName bind:this={randomMetaName} /></b>
+			<b><RandomMetaName bind:this={randomMetaName} bind:generatedName /></b>
 			<span>?</span>
 		</p>
 		<p>
-			<OpenAppButton color="primary" variant="outlined" klass="btn-primary-on-card" />
+			<OpenAppButton
+				color="primary"
+				variant="outlined"
+				klass="btn-primary-on-card"
+				label="Register name"
+				path="register/{generatedName}"
+			/>
 			<Button
 				class="btn-primary-on-card"
 				color="primary"
