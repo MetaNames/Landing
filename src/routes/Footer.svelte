@@ -35,9 +35,9 @@
 	footer {
 		display: flex;
 		flex-direction: row;
-		justify-content: space-between;
+		justify-content: space-evenly;
 		align-items: center;
-		padding: 2rem;
+		padding: 1rem;
 
 		@media only screen and (max-width: 600px) {
 			flex-direction: column;
