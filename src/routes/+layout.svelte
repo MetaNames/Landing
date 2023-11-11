@@ -4,6 +4,7 @@
 
 	import OpenAppButton from './OpenAppButton.svelte';
 	import Footer from './Footer.svelte';
+	import Logo from './Logo.svelte';
 
 	let topAppBar: TopAppBar;
 </script>
@@ -16,7 +17,10 @@
 	<Row>
 		<Section>
 			<Title>
-				<a class="home" href="/">Meta Names</a>
+				<a class="home" href="/">
+					<Logo />
+					<span>Meta Names</span>
+				</a>
 			</Title>
 		</Section>
 
