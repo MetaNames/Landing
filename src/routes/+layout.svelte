@@ -41,7 +41,11 @@
 
 <style>
 	.home {
-		color: var(--mdc-theme-on-primary);
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+
 		text-decoration: none;
+		color: inherit;
 	}
 </style>
