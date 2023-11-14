@@ -5,7 +5,7 @@
 
 <footer class="card-secondary">
 	<div class="logo">
-		<Logo />
+		<Logo color="dark" />
 		<span>Meta Names</span>
 	</div>
 	<div class="links">
@@ -29,7 +29,7 @@
 
 	a,
 	span {
-		color: var(--mdc-theme-on-primary);
+		color: var(--mdc-theme-on-background);
 	}
 
 	footer {
