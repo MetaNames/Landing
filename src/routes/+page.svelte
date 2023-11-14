@@ -1,5 +1,5 @@
 <script lang="ts">
-	import OpenAppButton from './OpenUrlButton.svelte';
+	import OpenAppButton from './OpenAppButton.svelte';
 
 	import RandomMetaName from './RandomMetaName.svelte';
 	import Button from '@smui/button/src/Button.svelte';
@@ -8,6 +8,7 @@
 	import '../styles/app.scss';
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
+	import OpenUrlButton from './OpenUrlButton.svelte';
 
 	let randomMetaName: RandomMetaName;
 
@@ -44,12 +45,9 @@
 				{/key}
 			</span> on your favourite web3 name
 		</h6>
-		<OpenAppButton
-			color="primary"
-			klass="btn-primary-on-card"
-			variant="outlined"
-			label="Register now"
-		/>
+		<OpenAppButton color="primary" class="btn-primary-on-card" variant="outlined"
+			>Register now</OpenAppButton
+		>
 	</div>
 </div>
 
@@ -72,7 +70,7 @@
 <div class="card-primary">
 	<div class="content">
 		<h3>Generate your Meta Name</h3>
-		<h6>
+		<h6 class="card-subtitle">
 			<span>What about minting</span>
 			<b><RandomMetaName bind:this={randomMetaName} bind:generatedName /></b>
 			<span>?</span>
@@ -81,10 +79,9 @@
 			<OpenAppButton
 				color="primary"
 				variant="outlined"
-				klass="btn-primary-on-card"
-				label="Register name"
-				path="register/{generatedName}"
-			/>
+				class="btn-primary-on-card"
+				path="register/{generatedName}">Register now</OpenAppButton
+			>
 			<Button
 				class="btn-primary-on-card"
 				color="primary"
@@ -100,13 +97,15 @@
 	<div class="card-secondary">
 		<div class="content">
 			<h3>Integrate with Meta Names</h3>
-			<h6>
+			<h6 class="card-subtitle">
 				Our SDK is a powerful tool that allows you to integrate Meta Names into your application.
-				<br />
-				<a href="https://github.com/MetaNames/sdk/wiki" target="_blank" rel="noopener noreferrer"
-					>Learn more</a
-				>
 			</h6>
+			<OpenUrlButton
+				color="primary"
+				variant="outlined"
+				class="btn-primary-on-card"
+				url="https://github.com/MetaNames/sdk/wiki">Learn more</OpenUrlButton
+			>
 		</div>
 	</div>
 </div>
@@ -121,6 +120,10 @@
 		@media only screen and (max-width: 600px) {
 			padding: 10%;
 		}
+	}
+
+	.card-subtitle {
+		margin-bottom: 0.5rem;
 	}
 
 	.title {
