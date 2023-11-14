@@ -1,5 +1,5 @@
 <script lang="ts">
-	import OpenAppButton from './OpenAppButton.svelte';
+	import OpenAppButton from './OpenUrlButton.svelte';
 
 	import RandomMetaName from './RandomMetaName.svelte';
 	import Button from '@smui/button/src/Button.svelte';
@@ -71,12 +71,12 @@
 
 <div class="card-primary">
 	<div class="content">
-		<h2>Generate your Meta Name</h2>
-		<p>
+		<h3>Generate your Meta Name</h3>
+		<h6>
 			<span>What about minting</span>
 			<b><RandomMetaName bind:this={randomMetaName} bind:generatedName /></b>
 			<span>?</span>
-		</p>
+		</h6>
 		<p>
 			<OpenAppButton
 				color="primary"
@@ -95,6 +95,19 @@
 				Regenerate
 			</Button>
 		</p>
+	</div>
+
+	<div class="card-secondary">
+		<div class="content">
+			<h3>Integrate with Meta Names</h3>
+			<h6>
+				Our SDK is a powerful tool that allows you to integrate Meta Names into your application.
+				<br />
+				<a href="https://github.com/MetaNames/sdk/wiki" target="_blank" rel="noopener noreferrer"
+					>Learn more</a
+				>
+			</h6>
+		</div>
 	</div>
 </div>
 
