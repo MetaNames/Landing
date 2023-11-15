@@ -93,20 +93,20 @@
 			</Button>
 		</p>
 	</div>
+</div>
 
-	<div class="card-secondary">
-		<div class="content">
-			<h3>Integrate with Meta Names</h3>
-			<h6 class="card-subtitle">
-				Our SDK is a powerful tool that allows you to integrate Meta Names into your application.
-			</h6>
-			<OpenUrlButton
-				color="primary"
-				variant="outlined"
-				class="btn-primary-on-card"
-				url="https://github.com/MetaNames/sdk/wiki">Learn more</OpenUrlButton
-			>
-		</div>
+<div class="card-secondary">
+	<div class="content">
+		<h3>Integrate with Meta Names</h3>
+		<h6 class="card-subtitle">
+			Our SDK is a powerful tool that allows you to integrate Meta Names into your application.
+		</h6>
+		<OpenUrlButton
+			color="primary"
+			variant="outlined"
+			class="btn-primary-on-card"
+			url="https://github.com/MetaNames/sdk/wiki">Learn more</OpenUrlButton
+		>
 	</div>
 </div>
 
