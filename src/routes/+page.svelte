@@ -71,7 +71,7 @@
 </Card>
 
 <Card type="secondary">
-	<h3>The only <span class="purple">name</span> you need</h3>
+	<h3 class="mt-0">The only <span class="purple">name</span> you need</h3>
 	<h6>
 		Register your domain and subdomains effortlessly with <b>Meta Names</b>, the cutting-edge web3
 		domain name system for
@@ -84,7 +84,7 @@
 	</h6>
 </Card>
 
-<Card type="secondary">
+<Card type="secondary" color="primary">
 	<h3>Generate your Meta Name</h3>
 	<h6 class="card-subtitle">
 		<span>What about minting</span>
