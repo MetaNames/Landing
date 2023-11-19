@@ -11,11 +11,16 @@
 </div>
 
 <style lang="scss">
+	.card-secondary {
+		.content {
+			padding: 2rem 4rem;
+		}
+	}
 	.content {
 		max-width: 1280px;
 		margin: 0 auto;
-		padding: 6rem 4rem;
 		text-align: center;
+		padding: 10rem 4rem;
 
 		@media only screen and (max-width: 600px) {
 			padding: 10%;

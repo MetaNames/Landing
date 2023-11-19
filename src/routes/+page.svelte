@@ -44,24 +44,9 @@
 			{/key}
 		</span> on your favourite web3 name
 	</h6>
-	<OpenAppButton color="primary" class="btn-primary-on-card" variant="outlined"
-		>Register now</OpenAppButton
-	>
 </Card>
 
 <Card type="secondary">
-	<h3>The only <span class="purple">name</span> you need</h3>
-	<h6>
-		Register your domain and subdomains effortlessly with <b>Meta Names</b>, the cutting-edge web3
-		domain name system for
-		<a href="https://partisiablockchain.com/" target="_blank" rel="noopener noreferrer"
-			>Partisia Blockchain</a
-		>.
-		<br />
-		Unlock a world of possibilities by conveniently saving various information within each domain: manage
-		wallet addresses, social handles, website links, and more.
-	</h6>
-
 	<div class="box container">
 		<div class="box">
 			Supported by
@@ -87,7 +72,21 @@
 	</div>
 </Card>
 
-<Card>
+<Card type="secondary">
+	<h3>The only <span class="purple">name</span> you need</h3>
+	<h6>
+		Register your domain and subdomains effortlessly with <b>Meta Names</b>, the cutting-edge web3
+		domain name system for
+		<a href="https://partisiablockchain.com/" target="_blank" rel="noopener noreferrer"
+			>Partisia Blockchain</a
+		>.
+		<br />
+		Unlock a world of possibilities by conveniently saving various information within each domain: manage
+		wallet addresses, social handles, website links, and more.
+	</h6>
+</Card>
+
+<Card type="secondary">
 	<h3>Generate your Meta Name</h3>
 	<h6 class="card-subtitle">
 		<span>What about minting</span>
