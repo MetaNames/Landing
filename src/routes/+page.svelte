@@ -27,12 +27,10 @@
 </script>
 
 <Card>
-	<h1 class="title">Meta Names</h1>
+	<h1 class="title">META NAMES</h1>
 	<h7 class="subtitle"
-		>Powered by <a
-			href="https://partisiablockchain.com/"
-			target="_blank"
-			rel="noopener noreferrer">Partisia Blockchain</a
+		>Powered by <a href="https://partisiablockchain.com/" target="_blank" rel="noopener noreferrer"
+			>Partisia Blockchain</a
 		></h7
 	>
 	<h6>
@@ -127,6 +125,11 @@
 
 <style lang="scss">
 	@use '../theme/colors.scss';
+
+	h1 {
+		font-size: 50pt;
+		font-weight: 500;
+	}
 
 	h3 {
 		font-weight: bold;
