@@ -9,6 +9,7 @@
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
 	import OpenUrlButton from './OpenUrlButton.svelte';
+	import Card from './Card.svelte';
 
 	let randomMetaName: RandomMetaName;
 
@@ -26,113 +27,105 @@
 	});
 </script>
 
-<div class="card-primary">
-	<div class="content">
-		<h1 class="title">Meta Names</h1>
-		<h7 class="subtitle"
-			>Supported by <a
-				href="https://partisiablockchain.com/"
-				target="_blank"
-				rel="noopener noreferrer">Partisia Blockchain</a
-			></h7
-		>
-		<h6>
-			Save your <span class="record-class">
-				{#key recordClass}
-					<span in:fade={{ duration: 200 }}>
-						{recordClass}
-					</span>
-				{/key}
-			</span> on your favourite web3 name
-		</h6>
-		<OpenAppButton color="primary" class="btn-primary-on-card" variant="outlined"
-			>Register now</OpenAppButton
-		>
-	</div>
-</div>
+<Card>
+	<h1 class="title">Meta Names</h1>
+	<h7 class="subtitle"
+		>Supported by <a
+			href="https://partisiablockchain.com/"
+			target="_blank"
+			rel="noopener noreferrer">Partisia Blockchain</a
+		></h7
+	>
+	<h6>
+		Save your <span class="record-class">
+			{#key recordClass}
+				<span in:fade={{ duration: 200 }}>
+					{recordClass}
+				</span>
+			{/key}
+		</span> on your favourite web3 name
+	</h6>
+	<OpenAppButton color="primary" class="btn-primary-on-card" variant="outlined"
+		>Register now</OpenAppButton
+	>
+</Card>
 
-<div class="card-secondary">
-	<div class="content">
-		<h3>The only <span class="purple">name</span> you need</h3>
-		<h6>
-			Register your domain and subdomains effortlessly with <b>Meta Names</b>, the cutting-edge web3
-			domain name system for
-			<a href="https://partisiablockchain.com/" target="_blank" rel="noopener noreferrer"
-				>Partisia Blockchain</a
-			>.
-			<br />
-			Unlock a world of possibilities by conveniently saving various information within each domain:
-			manage wallet addresses, social handles, website links, and more.
-		</h6>
+<Card type="secondary">
+	<h3>The only <span class="purple">name</span> you need</h3>
+	<h6>
+		Register your domain and subdomains effortlessly with <b>Meta Names</b>, the cutting-edge web3
+		domain name system for
+		<a href="https://partisiablockchain.com/" target="_blank" rel="noopener noreferrer"
+			>Partisia Blockchain</a
+		>.
+		<br />
+		Unlock a world of possibilities by conveniently saving various information within each domain: manage
+		wallet addresses, social handles, website links, and more.
+	</h6>
 
-		<div class="box container">
-			<div class="box">
-				Supported by
-				<div class="box-content right">
-					<a
-						class="partisia"
-						href="https://partisiablockchain.com/"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<img src="/images/partisia-logo.svg" alt="Partisia Blockchain" />
-					</a>
-				</div>
-			</div>
-			<div class="box">
-				<div class="box-content left">SOON</div>
-				Meta Names Registered
-			</div>
-			<div class="box">
-				<div class="box-content left">SOON</div>
-				Unique Wallets
+	<div class="box container">
+		<div class="box">
+			Supported by
+			<div class="box-content right">
+				<a
+					class="partisia"
+					href="https://partisiablockchain.com/"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<img src="/images/partisia-logo.svg" alt="Partisia Blockchain" />
+				</a>
 			</div>
 		</div>
+		<div class="box">
+			<div class="box-content left">SOON</div>
+			Meta Names Registered
+		</div>
+		<div class="box">
+			<div class="box-content left">SOON</div>
+			Unique Wallets
+		</div>
 	</div>
-</div>
+</Card>
 
-<div class="card-primary">
-	<div class="content">
-		<h3>Generate your Meta Name</h3>
-		<h6 class="card-subtitle">
-			<span>What about minting</span>
-			<b><RandomMetaName bind:this={randomMetaName} bind:generatedName /></b>
-			<span>?</span>
-		</h6>
-		<p>
-			<OpenAppButton
-				color="primary"
-				variant="outlined"
-				class="btn-primary-on-card"
-				path="register/{generatedName}">Register now</OpenAppButton
-			>
-			<Button
-				class="btn-primary-on-card"
-				color="primary"
-				variant="outlined"
-				on:click={() => randomMetaName.regenerate()}
-			>
-				<Icon class="material-icons">refresh</Icon>
-				Regenerate
-			</Button>
-		</p>
-	</div>
-</div>
-
-<div class="card-secondary">
-	<div class="content">
-		<h3>Integrate with <span class="purple">Meta Names</span></h3>
-		<h6 class="card-subtitle">
-			Our SDK is a powerful tool that allows you to integrate Meta Names into your application.
-		</h6>
-		<OpenUrlButton
+<Card>
+	<h3>Generate your Meta Name</h3>
+	<h6 class="card-subtitle">
+		<span>What about minting</span>
+		<b><RandomMetaName bind:this={randomMetaName} bind:generatedName /></b>
+		<span>?</span>
+	</h6>
+	<p>
+		<OpenAppButton
 			color="primary"
 			variant="outlined"
 			class="btn-primary-on-card"
-			url="https://github.com/MetaNames/sdk/wiki">Learn more</OpenUrlButton
+			path="register/{generatedName}">Register now</OpenAppButton
 		>
-	</div>
-</div>
+		<Button
+			class="btn-primary-on-card"
+			color="primary"
+			variant="outlined"
+			on:click={() => randomMetaName.regenerate()}
+		>
+			<Icon class="material-icons">refresh</Icon>
+			Regenerate
+		</Button>
+	</p>
+</Card>
+
+<Card type="secondary">
+	<h3>Integrate with <span class="purple">Meta Names</span></h3>
+	<h6 class="card-subtitle">
+		Our SDK is a powerful tool that allows you to integrate Meta Names into your application.
+	</h6>
+	<OpenUrlButton
+		color="primary"
+		variant="outlined"
+		class="btn-primary-on-card"
+		url="https://github.com/MetaNames/sdk/wiki">Learn more</OpenUrlButton
+	>
+</Card>
 
 <style lang="scss">
 	h3 {
@@ -172,17 +165,6 @@
 					margin-left: 0.5rem;
 				}
 			}
-		}
-	}
-
-	.content {
-		max-width: 1280px;
-		margin: 0 auto;
-		padding: 6rem 4rem;
-		text-align: center;
-
-		@media only screen and (max-width: 600px) {
-			padding: 10%;
 		}
 	}
 
