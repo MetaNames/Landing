@@ -64,6 +64,30 @@
 			Unlock a world of possibilities by conveniently saving various information within each domain:
 			manage wallet addresses, social handles, website links, and more.
 		</h6>
+
+		<div class="box container">
+			<div class="box">
+				Supported by
+				<div class="box-content right">
+					<a
+						class="partisia"
+						href="https://partisiablockchain.com/"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<img src="/images/partisia-logo.svg" alt="Partisia Blockchain" />
+					</a>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-content left">SOON</div>
+				Meta Names Registered
+			</div>
+			<div class="box">
+				<div class="box-content left">SOON</div>
+				Unique Wallets
+			</div>
+		</div>
 	</div>
 </div>
 
@@ -115,10 +139,46 @@
 		font-weight: bold;
 	}
 
+	.box,
+	.container {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		align-items: center;
+		margin: 0 0.5rem;
+
+		.box {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			padding: 1rem;
+			border: 1px solid var(--mdc-theme-primary);
+			color: grey;
+			border-radius: 0.5rem;
+			font-size: small;
+
+			.box-content {
+				display: flex;
+				justify-content: center;
+				color: var(--mdc-theme-primary);
+				font-size: larger;
+				font-weight: 900;
+
+				&.left {
+					margin-right: 0.5rem;
+				}
+
+				&.right {
+					margin-left: 0.5rem;
+				}
+			}
+		}
+	}
+
 	.content {
 		max-width: 1280px;
 		margin: 0 auto;
-		padding: 8rem;
+		padding: 6rem 4rem;
 		text-align: center;
 
 		@media only screen and (max-width: 600px) {
@@ -127,7 +187,17 @@
 	}
 
 	.card-subtitle {
-		margin-bottom: 0.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.partisia {
+		display: flex;
+		justify-content: center;
+
+		img {
+			height: auto;
+			width: 130pt;
+		}
 	}
 
 	.purple {
