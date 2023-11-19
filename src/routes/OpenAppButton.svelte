@@ -13,9 +13,6 @@
 	export let variant: 'text' | 'raised' | 'outlined' = 'text';
 	export let path: string = '/';
 
-
-	const iconClasses = variant === 'text' ? ' icon-on-primary' : '';
-
 	$: fullUrl = metaNamesAppUrl + path;
 </script>
 
@@ -25,5 +22,5 @@
 	{variant}
 	url="{fullUrl}"
 >
-	<slot>Open App</slot>
+	<slot>Launch App</slot>
 </OpenUrlButton>
