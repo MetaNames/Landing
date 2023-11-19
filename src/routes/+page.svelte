@@ -30,7 +30,7 @@
 	<div class="content">
 		<h1 class="title">Meta Names</h1>
 		<h7 class="subtitle"
-			>Powered by <a
+			>Supported by <a
 				href="https://partisiablockchain.com/"
 				target="_blank"
 				rel="noopener noreferrer">Partisia Blockchain</a
