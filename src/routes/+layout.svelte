@@ -2,6 +2,8 @@
 	import Section from '@smui/top-app-bar/src/Section.svelte';
 	import TopAppBar, { Row, Title } from '@smui/top-app-bar';
 
+	import '../styles/app.scss';
+
 	import OpenAppButton from './OpenAppButton.svelte';
 	import Footer from './Footer.svelte';
 	import Logo from './Logo.svelte';
@@ -27,7 +29,7 @@
 		</Section>
 
 		<Section align="end" toolbar>
-			<OpenAppButton color="secondary" />
+			<OpenAppButton color="primary" class="btn-primary-on-card" variant="outlined" />
 		</Section>
 	</Row>
 </TopAppBar>
