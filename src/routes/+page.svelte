@@ -5,7 +5,6 @@
 	import Button from '@smui/button/src/Button.svelte';
 	import { Icon } from '@smui/icon-button';
 
-	import '../styles/app.scss';
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
 	import OpenUrlButton from './OpenUrlButton.svelte';
@@ -128,6 +127,8 @@
 </Card>
 
 <style lang="scss">
+	@use '../theme/colors.scss';
+
 	h3 {
 		font-weight: bold;
 	}
@@ -207,7 +208,7 @@
 		padding: 0.25rem 0.5rem;
 		border-radius: 0.25rem;
 		font-weight: bold;
-		background-color: var(--mdc-theme-surface);
+		background-color: colors.$light-surface;
 		color: var(--mdc-theme-primary);
 	}
 </style>

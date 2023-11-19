@@ -5,7 +5,7 @@
 @use '@material/theme/color-palette';
 @use '@material/theme/index' as theme with ($primary: colors.$primary,
   $secondary: colors.$secondary,
-  $surface: #fff,
+  $surface: colors.$light-surface,
   $background: #fff,
   $error: color-palette.$red-900);
 @use '@material/theme/styles';
