@@ -14,7 +14,7 @@
 
 	let generatedName: string;
 
-	const recordClasses = ['wallet address', 'social handles', 'website URL'];
+	const recordClasses = ['wallet address', 'social handles', 'website URL', 'bio', 'avatar'];
 	let recordClass: string = recordClasses[0];
 
 	onMount(() => {
