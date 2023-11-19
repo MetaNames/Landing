@@ -1,5 +1,6 @@
 @use 'sass:color';
 @use '../theme/colors.scss';
+@use './mixins.scss';
 
 .btn-primary-on-card {
   background-color: var(--mdc-theme-on-primary);
