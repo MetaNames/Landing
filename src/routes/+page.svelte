@@ -29,7 +29,7 @@
 <Card>
 	<h1 class="title">Meta Names</h1>
 	<h7 class="subtitle"
-		>Supported by <a
+		>Powered by <a
 			href="https://partisiablockchain.com/"
 			target="_blank"
 			rel="noopener noreferrer">Partisia Blockchain</a
