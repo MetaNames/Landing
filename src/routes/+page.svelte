@@ -53,7 +53,7 @@
 
 <div class="card-secondary">
 	<div class="content">
-		<h3>The only name you need</h3>
+		<h3>The only <span class="purple">name</span> you need</h3>
 		<h6>
 			Register your domain and subdomains effortlessly with <b>Meta Names</b>, the cutting-edge web3
 			domain name system for
@@ -97,7 +97,7 @@
 
 <div class="card-secondary">
 	<div class="content">
-		<h3>Integrate with Meta Names</h3>
+		<h3>Integrate with <span class="purple">Meta Names</span></h3>
 		<h6 class="card-subtitle">
 			Our SDK is a powerful tool that allows you to integrate Meta Names into your application.
 		</h6>
@@ -130,6 +130,10 @@
 		margin-bottom: 0.5rem;
 	}
 
+	.purple {
+		color: var(--mdc-theme-primary);
+	}
+
 	.title {
 		margin-bottom: 0.5rem;
 	}
@@ -141,6 +145,10 @@
 			color: var(--mdc-theme-text-on-primary);
 			text-decoration: none;
 		}
+	}
+
+	a {
+		text-decoration: none;
 	}
 
 	.record-class {
