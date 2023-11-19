@@ -3,9 +3,9 @@
 
 </script>
 
-<footer class="card-secondary">
+<footer class="card-primary">
 	<div class="logo">
-		<Logo color="dark" />
+		<Logo color="light" />
 		<span>Meta Names</span>
 	</div>
 	<div class="links">
