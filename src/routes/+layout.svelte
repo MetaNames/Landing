@@ -1,19 +1,19 @@
 <script lang="ts">
 	import Section from '@smui/top-app-bar/src/Section.svelte';
-	import TopAppBar, { AutoAdjust, Row, Title } from '@smui/top-app-bar';
+	import TopAppBar, { Row, Title } from '@smui/top-app-bar';
+
+	import '../styles/app.scss';
 
 	import OpenAppButton from './OpenAppButton.svelte';
 	import Footer from './Footer.svelte';
 	import Logo from './Logo.svelte';
-
-	let topAppBar: TopAppBar;
 </script>
 
 <svelte:head>
 	<title>Meta Names</title>
 </svelte:head>
 
-<TopAppBar bind:this={topAppBar} variant="standard">
+<TopAppBar variant="fixed">
 	<Row>
 		<Section>
 			<Title>
@@ -29,15 +29,13 @@
 		</Section>
 
 		<Section align="end" toolbar>
-			<OpenAppButton color="secondary" />
+			<OpenAppButton color="primary" class="btn-primary-on-card" variant="outlined" />
 		</Section>
 	</Row>
 </TopAppBar>
 
-<AutoAdjust {topAppBar}>
-	<slot />
-	<Footer />
-</AutoAdjust>
+<slot />
+<Footer />
 
 <style>
 	.home {
