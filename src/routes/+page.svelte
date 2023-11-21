@@ -70,7 +70,7 @@
 	</div>
 </Card>
 
-<Card type="secondary">
+<Card type="primary" color="secondary">
 	<h3 class="mt-0">The only <span class="purple">name</span> you need</h3>
 	<h6>
 		Register your domain and subdomains effortlessly with <b>Meta Names</b>, the cutting-edge web3
@@ -110,10 +110,19 @@
 	</p>
 </Card>
 
-<Card type="secondary">
-	<h3>Integrate with <span class="purple">Meta Names</span></h3>
+<Card type="primary" color="secondary">
+	<h3>Integrate with <span class="purple">Meta Names SDK</span></h3>
 	<h6 class="card-subtitle">
-		Our SDK is a powerful tool that allows you to integrate Meta Names into your application.
+		Discover the ease of web3 domain management with <b>Meta Names SDK</b> for
+		<a href="https://partisiablockchain.com/" target="_blank" rel="noopener noreferrer"
+			>Partisia Blockchain</a
+		>.
+		<br>
+		Our platform offers simple domain and subdomain registration, versatile information embedding, and a developer-friendly toolkit.
+		<br>
+		<a href="https://discord.gg/bn6tJNRgUS" target="_blank" rel="noopener noreferrrer">Join our supportive community</a>, access detailed documentation, and transform your applications with the power of Meta Names.
+		<br>
+		Your journey into the future of web3 starts here.
 	</h6>
 	<OpenUrlButton
 		color="primary"
