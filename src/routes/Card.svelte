@@ -20,8 +20,14 @@
 		text-align: center;
 
 		@media only screen and (max-width: 600px) {
-			padding: 10%;
+			&.content-primary {
+				padding: 4rem 2rem !important;
+			}
+			&.content-secondary {
+				padding: 2rem 2rem !important;
+			}
 		}
+
 		&.content-primary {
 			padding: 10rem 4rem;
 		}
