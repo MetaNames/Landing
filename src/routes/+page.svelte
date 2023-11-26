@@ -221,5 +221,7 @@
 		font-weight: bold;
 		background-color: colors.$light-surface;
 		color: var(--mdc-theme-primary);
+
+		white-space: nowrap;
 	}
 </style>
