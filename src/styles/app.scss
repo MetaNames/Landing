@@ -2,6 +2,12 @@
 @use '../theme/colors.scss';
 @use './mixins.scss';
 
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
 .btn-primary-on-card {
   background-color: var(--mdc-theme-on-primary);
   color: var(--mdc-theme-primary) !important;
