@@ -91,15 +91,15 @@
 		<b><RandomMetaName bind:this={randomMetaName} bind:generatedName /></b>
 		<span>?</span>
 	</h6>
-	<p>
+	<div class="generate-buttons">
 		<OpenAppButton
 			color="primary"
 			variant="outlined"
-			class="btn-primary-on-card"
+			class="btn-primary-on-card mb-1"
 			path="register/{generatedName}">Register now</OpenAppButton
 		>
 		<Button
-			class="btn-primary-on-card"
+			class="btn-primary-on-card mb-1"
 			color="primary"
 			variant="outlined"
 			on:click={() => randomMetaName.regenerate()}
@@ -107,7 +107,7 @@
 			<Icon class="material-icons">refresh</Icon>
 			Regenerate
 		</Button>
-	</p>
+	</div>
 </Card>
 
 <Card type="primary" color="secondary">
@@ -117,11 +117,14 @@
 		<a href="https://partisiablockchain.com/" target="_blank" rel="noopener noreferrer"
 			>Partisia Blockchain</a
 		>.
-		<br>
-		Our platform offers simple domain and subdomain registration, versatile information embedding, and a developer-friendly toolkit.
-		<br>
-		<a href="https://discord.gg/bn6tJNRgUS" target="_blank" rel="noopener noreferrrer">Join our supportive community</a>, access detailed documentation, and transform your applications with the power of Meta Names.
-		<br>
+		<br />
+		Our platform offers simple domain and subdomain registration, versatile information embedding, and
+		a developer-friendly toolkit.
+		<br />
+		<a href="https://discord.gg/bn6tJNRgUS" target="_blank" rel="noopener noreferrrer"
+			>Join our supportive community</a
+		>, access detailed documentation, and transform your applications with the power of Meta Names.
+		<br />
 		Your journey into the future of web3 starts here.
 	</h6>
 	<OpenUrlButton
@@ -152,6 +155,10 @@
 		align-items: center;
 		margin: 0 0.5rem;
 
+		@media only screen and (max-width: 600px) {
+			flex-direction: column;
+		}
+
 		.box {
 			display: flex;
 			flex-direction: row;
@@ -161,6 +168,11 @@
 			color: grey;
 			border-radius: 0.5rem;
 			font-size: small;
+
+			@media only screen and (max-width: 600px) {
+				margin-bottom: 1rem;
+				width: 100%;
+			}
 
 			.box-content {
 				display: flex;
@@ -182,6 +194,14 @@
 
 	.card-subtitle {
 		margin-bottom: 1rem;
+	}
+
+	.generate-buttons {
+		@media only screen and (max-width: 600px) {
+			display: flex;
+			justify-content: space-evenly;
+			flex-direction: column;
+		}
 	}
 
 	.partisia {
@@ -221,5 +241,7 @@
 		font-weight: bold;
 		background-color: colors.$light-surface;
 		color: var(--mdc-theme-primary);
+
+		white-space: nowrap;
 	}
 </style>
