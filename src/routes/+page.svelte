@@ -91,15 +91,15 @@
 		<b><RandomMetaName bind:this={randomMetaName} bind:generatedName /></b>
 		<span>?</span>
 	</h6>
-	<p>
+	<div class="generate-buttons">
 		<OpenAppButton
 			color="primary"
 			variant="outlined"
-			class="btn-primary-on-card"
+			class="btn-primary-on-card mb-1"
 			path="register/{generatedName}">Register now</OpenAppButton
 		>
 		<Button
-			class="btn-primary-on-card"
+			class="btn-primary-on-card mb-1"
 			color="primary"
 			variant="outlined"
 			on:click={() => randomMetaName.regenerate()}
@@ -107,7 +107,7 @@
 			<Icon class="material-icons">refresh</Icon>
 			Regenerate
 		</Button>
-	</p>
+	</div>
 </Card>
 
 <Card type="primary" color="secondary">
@@ -194,6 +194,14 @@
 
 	.card-subtitle {
 		margin-bottom: 1rem;
+	}
+
+	.generate-buttons {
+		@media only screen and (max-width: 600px) {
+			display: flex;
+			justify-content: space-evenly;
+			flex-direction: column;
+		}
 	}
 
 	.partisia {
