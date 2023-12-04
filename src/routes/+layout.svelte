@@ -1,10 +1,15 @@
 <script lang="ts">
+	import { dev } from '$app/environment';
+	import { inject } from '@vercel/analytics';
+
 	import Section from '@smui/top-app-bar/src/Section.svelte';
 	import TopAppBar, { Row, Title } from '@smui/top-app-bar';
 
 	import OpenAppButton from './OpenAppButton.svelte';
 	import Footer from './Footer.svelte';
 	import Logo from './Logo.svelte';
+
+	inject({ mode: dev ? 'development' : 'production' });
 </script>
 
 <svelte:head>
