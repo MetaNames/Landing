@@ -2,12 +2,11 @@ import { websiteUrl } from "$lib";
 
 export async function GET() {
 	return new Response(
-		`
-    User-agent: Googlebot
-    User-agent: *
-    Allow: /
+		`User-agent: Googlebot
+     User-agent: *
+     Allow: /
 
-    Sitemap: ${websiteUrl}sitemap.xml
+     Sitemap: ${websiteUrl}sitemap.xml
 		`.split('\n').map(line => line.trim()).join('\n'),
 		{
 			headers: {
