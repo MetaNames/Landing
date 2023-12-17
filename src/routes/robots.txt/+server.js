@@ -8,7 +8,7 @@ export async function GET() {
     Allow: /
 
     Sitemap: ${websiteUrl}sitemap.xml
-		`.trim(),
+		`.split('\n').map(line => line.trim()).join('\n'),
 		{
 			headers: {
 				'Content-Type': 'text/plain'
