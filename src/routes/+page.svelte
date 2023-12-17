@@ -164,8 +164,8 @@
 			flex-direction: row;
 			justify-content: center;
 			padding: 1rem;
-			border: 1px solid var(--mdc-theme-primary);
-			color: grey;
+			background-color: var(--mdc-theme-primary);
+			color: var(--mdc-theme-text-on-primary);
 			border-radius: 0.5rem;
 			font-size: small;
 
@@ -177,7 +177,7 @@
 			.box-content {
 				display: flex;
 				justify-content: center;
-				color: var(--mdc-theme-primary);
+				color: var(--mdc-theme-text-on-primary);
 				font-size: larger;
 				font-weight: 900;
 
@@ -209,6 +209,7 @@
 		justify-content: center;
 
 		img {
+			color: mdc(--mdc-theme-text-on-primary);
 			height: auto;
 			width: 130pt;
 		}
