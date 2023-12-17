@@ -13,7 +13,7 @@
 	export let variant: 'text' | 'raised' | 'outlined' = 'text';
 	export let path: string = '/';
 
-	$: fullUrl = metaNamesAppUrl + path;
+	$: fullUrl = metaNamesAppUrl.replace(/\/$/, '') + path;
 </script>
 
 <OpenUrlButton
