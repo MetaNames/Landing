@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { dev } from '$app/environment';
 	import { inject } from '@vercel/analytics';
+	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
 
 	import Section from '@smui/top-app-bar/src/Section.svelte';
 	import TopAppBar, { Row, Title } from '@smui/top-app-bar';
@@ -10,6 +11,7 @@
 	import Logo from './Logo.svelte';
 
 	inject({ mode: dev ? 'development' : 'production' });
+	injectSpeedInsights();
 </script>
 
 <svelte:head>
