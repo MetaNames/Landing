@@ -8,7 +8,6 @@
 		<span>Meta Names</span>
 	</div>
 	<div class="links">
-		<a href="mailto:metanames@proton.me" target="_blank">Contact us</a>
 		<a href="https://t.me/mpc_metanames" target="_blank">Telegram</a>
 		<a href="https://x.com/metanames_" target="_blank">Twitter</a>
 		<a href="https://github.com/metanames" target="_blank">GitHub</a>
