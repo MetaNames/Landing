@@ -121,7 +121,7 @@
 		Our platform offers simple domain and subdomain registration, versatile information embedding, and
 		a developer-friendly toolkit.
 		<br />
-		<a href="https://discord.gg/bn6tJNRgUS" target="_blank" rel="noopener noreferrrer"
+		<a href="https://t.me/mpc_metanames" target="_blank" rel="noopener noreferrrer"
 			>Join our supportive community</a
 		>, access detailed documentation, and transform your applications with the power of Meta Names.
 		<br />
