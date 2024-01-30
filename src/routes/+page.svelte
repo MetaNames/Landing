@@ -96,7 +96,7 @@
 			color="primary"
 			variant="outlined"
 			class="btn-primary-on-card mb-1"
-			path="register/{generatedName}">Register now</OpenAppButton
+			path="/register/{generatedName}">Register now</OpenAppButton
 		>
 		<Button
 			class="btn-primary-on-card mb-1"
