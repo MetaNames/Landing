@@ -1,6 +1,4 @@
 <script lang="ts">
-	import Button, { Icon } from '@smui/button';
-
 	import OpenUrlButton from './OpenUrlButton.svelte';
 
 	import { metaNamesAppUrl } from '$lib';
