@@ -6,7 +6,7 @@
 
 	export let count: number = 0;
 
-  let countTweened = tweened(0, { duration: 2000, easing: quintOut })
+  let countTweened = tweened(0, { duration: 4000, easing: quintOut })
   let formatted = derived(countTweened, ($countTweened) => $countTweened.toFixed())
 
   onMount(() => countTweened.set(count))
