@@ -9,13 +9,15 @@
 	import { fade } from 'svelte/transition';
 	import OpenUrlButton from './OpenUrlButton.svelte';
 	import Card from './Card.svelte';
+	import type { PageData } from './$types';
 
 	let randomMetaName: RandomMetaName;
-
 	let generatedName: string;
 
 	const recordClasses = ['wallet address', 'social handles', 'website URL', 'bio', 'avatar'];
 	let recordClass: string = recordClasses[0];
+
+	export let data: PageData;
 
 	onMount(() => {
 		const interval = setInterval(() => {
@@ -60,11 +62,11 @@
 			</div>
 		</div>
 		<div class="box">
-			<div class="box-content left">SOON</div>
+			<div class="box-content left">{data.stats.domainCount}</div>
 			Meta Names Registered
 		</div>
 		<div class="box">
-			<div class="box-content left">SOON</div>
+			<div class="box-content left">{data.stats.ownerCount}</div>
 			Unique Wallets
 		</div>
 	</div>
@@ -179,7 +181,8 @@
 				justify-content: center;
 				color: var(--mdc-theme-on-primary);
 				font-size: larger;
-				font-weight: 900;
+				font-weight: bolder;
+				padding: 0 0.5rem;
 
 				&.left {
 					margin-right: 0.5rem;
