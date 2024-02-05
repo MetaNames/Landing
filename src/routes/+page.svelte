@@ -10,14 +10,15 @@
 	import OpenUrlButton from './OpenUrlButton.svelte';
 	import Card from './Card.svelte';
 	import type { PageData } from './$types';
+	import Counter from './Counter.svelte';
+
+	export let data: PageData;
 
 	let randomMetaName: RandomMetaName;
 	let generatedName: string;
 
 	const recordClasses = ['wallet address', 'social handles', 'website URL', 'bio', 'avatar'];
 	let recordClass: string = recordClasses[0];
-
-	export let data: PageData;
 
 	onMount(() => {
 		const interval = setInterval(() => {
@@ -62,11 +63,11 @@
 			</div>
 		</div>
 		<div class="box">
-			<div class="box-content left">{data.stats.domainCount}</div>
+			<div class="box-content left"><Counter count={data.stats.domainCount} /></div>
 			Meta Names Registered
 		</div>
 		<div class="box">
-			<div class="box-content left">{data.stats.ownerCount}</div>
+			<div class="box-content left"><Counter count={data.stats.ownerCount} /></div>
 			Unique Wallets
 		</div>
 	</div>

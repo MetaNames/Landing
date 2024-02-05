@@ -1,4 +1,4 @@
-import { metaNamesSdk } from "$lib";
+import { metaNamesSdk } from "$lib/server";
 
 export async function load() {
 	const ownerCount = await metaNamesSdk.domainRepository.getOwners().then(owners => owners.length)
