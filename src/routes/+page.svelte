@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import { onDestroy, onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
 	import Carousel from 'svelte-carousel';
 
@@ -11,19 +11,22 @@
 	import RandomMetaName from './RandomMetaName.svelte';
 	import OpenUrlButton from './OpenUrlButton.svelte';
 	import Section from './Section.svelte';
-	import type { PageData } from './$types';
 	import Counter from './Counter.svelte';
 	import { browser } from '$app/environment';
 	import { formatDistanceToNow } from 'date-fns';
 	import { metaNamesAppUrl } from '$lib';
-	import { goto } from '$app/navigation';
-
-	export let data: PageData;
+	import { writable } from 'svelte/store';
 
 	let randomMetaName: RandomMetaName;
 	let generatedName: string;
 	let innerWidth: number = browser ? window.innerWidth : 0;
+	let interval: NodeJS.Timeout;
 
+	const stats = writable({
+		domainCount: 0,
+		ownerCount: 0,
+		recentDomains: [{ name: 'name', createdAt: '2024/02/01' }]
+	});
 	const recordClasses = ['wallet address', 'social handles', 'website URL', 'bio', 'avatar'];
 	let recordClass: string = recordClasses[0];
 
@@ -35,12 +38,19 @@
 		});
 	}
 
-	onMount(() => {
-		const interval = setInterval(() => {
+	onMount(async () => {
+		interval = setInterval(() => {
 			recordClass = recordClasses[Math.floor(Math.random() * recordClasses.length)];
 		}, 2000);
 
-		return () => clearInterval(interval);
+		await fetch('/api/stats').then(async (res) => {
+			const data = await res.json();
+			stats.set(data);
+		});
+	});
+
+	onDestroy(() => {
+		clearInterval(interval);
 	});
 
 	function formatCreatedAt(date: Date) {
@@ -82,11 +92,23 @@
 			</div>
 		</div>
 		<div class="box">
-			<div class="box-content left"><Counter count={data.domainCount} /></div>
+			<div class="box-content left">
+				{#if $stats.domainCount > 0}
+					<Counter count={$stats.domainCount} />
+				{:else}
+					0
+				{/if}
+			</div>
 			Meta Names Registered
 		</div>
 		<div class="box">
-			<div class="box-content left"><Counter count={data.ownerCount} /></div>
+			<div class="box-content left">
+				{#if $stats.ownerCount > 0}
+					<Counter count={$stats.ownerCount} />
+				{:else}
+					0
+				{/if}
+			</div>
 			Unique Wallets
 		</div>
 	</div>
@@ -115,9 +137,12 @@
 				dots={false}
 				arrows={false}
 			>
-				{#each data.recentDomains as domain (domain.name)}
+				{#each $stats.recentDomains as domain (domain.name)}
 					<Card class="domain" variant="outlined">
-						<PrimaryAction on:click={() => window.open(`${metaNamesAppUrl}/domain/${domain.name}`, '_blank')} padded>
+						<PrimaryAction
+							on:click={() => window.open(`${metaNamesAppUrl}/domain/${domain.name}`, '_blank')}
+							padded
+						>
 							<span class="domain-name">{domain.name}</span>
 							<span class="domain-date">{formatCreatedAt(domain.createdAt)}</span>
 						</PrimaryAction>
