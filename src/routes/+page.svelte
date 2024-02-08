@@ -282,19 +282,21 @@
 
 		.content {
 			color: var(--mdc-theme-on-primary);
+			overflow-x: hidden;
+
 			:global(.domain) {
 				margin-right: 1rem;
 				user-select: none;
 				background-color: var(--mdc-theme-primary);
 			}
 
-			:global(.domain-name) {
+			.domain-name {
 				font-weight: bold;
 				margin-bottom: 0.5rem;
 				overflow-x: visible;
 			}
 
-			:global(.domain-date) {
+			.domain-date {
 				font-size: 0.8rem;
 				opacity: 0.7;
 			}
