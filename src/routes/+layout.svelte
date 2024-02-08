@@ -9,6 +9,8 @@
 	import Footer from './Footer.svelte';
 	import Logo from './Logo.svelte';
 
+	import 'material-icons/iconfont/filled.css';
+
 	inject({ mode: dev ? 'development' : 'production' });
 </script>
 
