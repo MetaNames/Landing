@@ -63,11 +63,11 @@
 			</div>
 		</div>
 		<div class="box">
-			<div class="box-content left"><Counter count={data.stats.domainCount} /></div>
+			<div class="box-content left"><Counter count={data.domainCount} /></div>
 			Meta Names Registered
 		</div>
 		<div class="box">
-			<div class="box-content left"><Counter count={data.stats.ownerCount} /></div>
+			<div class="box-content left"><Counter count={data.ownerCount} /></div>
 			Unique Wallets
 		</div>
 	</div>
