@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onDestroy, onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
-	import Carousel from 'svelte-carousel';
+	import Marqueeck from '@arisbh/marqueeck';
 
 	import Button from '@smui/button/src/Button.svelte';
 	import { Icon } from '@smui/icon-button';
@@ -53,8 +53,9 @@
 		clearInterval(interval);
 	});
 
-	function formatCreatedAt(date: Date) {
-		return formatDistanceToNow(date, { addSuffix: true });
+	function formatCreatedAt(date: string) {
+		const parsed = new Date(date);
+		return formatDistanceToNow(parsed, { addSuffix: true });
 	}
 </script>
 
@@ -128,15 +129,7 @@
 	</h6>
 	<div class="recent-domains">
 		<div class="content">
-			<Carousel
-				autoplayDuration={0}
-				particlesToShow={isDesktop ? 3 : 2}
-				duration={12000}
-				autoplay
-				timingFunction="linear"
-				dots={false}
-				arrows={false}
-			>
+			<Marqueeck>
 				{#each $stats.recentDomains as domain (domain.name)}
 					<Card class="domain" variant="outlined">
 						<PrimaryAction
@@ -148,7 +141,7 @@
 						</PrimaryAction>
 					</Card>
 				{/each}
-			</Carousel>
+			</Marqueeck>
 		</div>
 	</div>
 </Section>
