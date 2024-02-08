@@ -117,7 +117,7 @@
 			>
 				{#each data.recentDomains as domain (domain.name)}
 					<Card class="domain" variant="outlined">
-						<PrimaryAction on:click={() => goto(`${metaNamesAppUrl}/domain/${domain.name}`)} padded>
+						<PrimaryAction on:click={() => window.open(`${metaNamesAppUrl}/domain/${domain.name}`, '_blank')} padded>
 							<span class="domain-name">{domain.name}</span>
 							<span class="domain-date">{formatCreatedAt(domain.createdAt)}</span>
 						</PrimaryAction>
