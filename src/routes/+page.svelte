@@ -131,7 +131,7 @@
 			<Carousel
 				autoplayDuration={0}
 				particlesToShow={isDesktop ? 3 : 2}
-				duration={8000}
+				duration={12000}
 				autoplay
 				timingFunction="linear"
 				dots={false}
