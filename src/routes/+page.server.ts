@@ -28,5 +28,5 @@ const fetchRecentDomains = async () => {
 		cache.put(cacheKey, recentDomains);
 	}
 
-	return recentDomains
+	return recentDomains as RecentDomain[];
 };

@@ -21,7 +21,7 @@
 
 		@media only screen and (max-width: 600px) {
 			&.content-primary {
-				padding: 4rem 2rem !important;
+				padding: 3rem 2rem !important;
 			}
 			&.content-secondary {
 				padding: 2rem 2rem !important;
@@ -29,7 +29,7 @@
 		}
 
 		&.content-primary {
-			padding: 10rem 4rem;
+			padding: 6rem 4rem;
 		}
 		&.content-secondary {
 			padding: 2rem 4rem;

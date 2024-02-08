@@ -1,24 +1,39 @@
 <script lang="ts">
-	import OpenAppButton from './OpenAppButton.svelte';
-
-	import RandomMetaName from './RandomMetaName.svelte';
-	import Button from '@smui/button/src/Button.svelte';
-	import { Icon } from '@smui/icon-button';
-
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
+	import Carousel from 'svelte-carousel';
+
+	import Button from '@smui/button/src/Button.svelte';
+	import { Icon } from '@smui/icon-button';
+	import Card, { PrimaryAction } from '@smui/card';
+
+	import OpenAppButton from './OpenAppButton.svelte';
+	import RandomMetaName from './RandomMetaName.svelte';
 	import OpenUrlButton from './OpenUrlButton.svelte';
-	import Card from './Card.svelte';
+	import Section from './Section.svelte';
 	import type { PageData } from './$types';
 	import Counter from './Counter.svelte';
+	import { browser } from '$app/environment';
+	import { formatDistanceToNow } from 'date-fns';
+	import { metaNamesAppUrl } from '$lib';
+	import { goto } from '$app/navigation';
 
 	export let data: PageData;
 
 	let randomMetaName: RandomMetaName;
 	let generatedName: string;
+	let innerWidth: number = browser ? window.innerWidth : 0;
 
 	const recordClasses = ['wallet address', 'social handles', 'website URL', 'bio', 'avatar'];
 	let recordClass: string = recordClasses[0];
+
+	$: isDesktop = innerWidth > 768;
+
+	if (browser) {
+		window.addEventListener('resize', () => {
+			innerWidth = window.innerWidth;
+		});
+	}
 
 	onMount(() => {
 		const interval = setInterval(() => {
@@ -27,9 +42,13 @@
 
 		return () => clearInterval(interval);
 	});
+
+	function formatCreatedAt(date: Date) {
+		return formatDistanceToNow(date, { addSuffix: true });
+	}
 </script>
 
-<Card>
+<Section>
 	<h1 class="title">META NAMES</h1>
 	<h7 class="subtitle"
 		>Powered by <a href="https://partisiablockchain.com/" target="_blank" rel="noopener noreferrer"
@@ -45,9 +64,9 @@
 			{/key}
 		</span> on your favourite web3 name
 	</h6>
-</Card>
+</Section>
 
-<Card type="secondary">
+<Section type="secondary">
 	<div class="box container">
 		<div class="box">
 			Supported by
@@ -71,9 +90,9 @@
 			Unique Wallets
 		</div>
 	</div>
-</Card>
+</Section>
 
-<Card type="primary" color="secondary">
+<Section type="primary" color="secondary">
 	<h3 class="mt-0">The only <span class="purple">name</span> you need</h3>
 	<h6>
 		Register your domain and subdomains effortlessly with <b>Meta Names</b>, the cutting-edge web3
@@ -85,9 +104,31 @@
 		Unlock a world of possibilities by conveniently saving various information within each domain: manage
 		wallet addresses, social handles, website links, and more.
 	</h6>
-</Card>
+	<div class="recent-domains">
+		<div class="content">
+			<Carousel
+				autoplayDuration={0}
+				particlesToShow={isDesktop ? 3 : 2}
+				duration={8000}
+				autoplay
+				timingFunction="linear"
+				dots={false}
+				arrows={false}
+			>
+				{#each data.recentDomains as domain (domain.name)}
+					<Card class="domain" variant="outlined">
+						<PrimaryAction on:click={() => goto(`${metaNamesAppUrl}/domain/${domain.name}`)} padded>
+							<span class="domain-name">{domain.name}</span>
+							<span class="domain-date">{formatCreatedAt(domain.createdAt)}</span>
+						</PrimaryAction>
+					</Card>
+				{/each}
+			</Carousel>
+		</div>
+	</div>
+</Section>
 
-<Card type="secondary" color="primary">
+<Section type="secondary" color="primary">
 	<h3>Generate your Meta Name</h3>
 	<h6 class="card-subtitle">
 		<span>What about minting</span>
@@ -111,9 +152,9 @@
 			Regenerate
 		</Button>
 	</div>
-</Card>
+</Section>
 
-<Card type="primary" color="secondary">
+<Section type="primary" color="secondary">
 	<h3>Integrate with <span class="purple">Meta Names SDK</span></h3>
 	<h6 class="card-subtitle">
 		Discover the ease of web3 domain management with <b>Meta Names SDK</b> for
@@ -136,7 +177,7 @@
 		class="btn-primary-on-card"
 		url="https://github.com/MetaNames/sdk/wiki">Learn more</OpenUrlButton
 	>
-</Card>
+</Section>
 
 <style lang="scss">
 	@use '../theme/colors.scss';
@@ -215,6 +256,34 @@
 		img {
 			height: auto;
 			width: 130pt;
+		}
+	}
+
+	.recent-domains {
+		margin-top: 4rem;
+
+		h5 {
+			margin-bottom: 1rem;
+		}
+
+		.content {
+			color: var(--mdc-theme-on-primary);
+			:global(.domain) {
+				margin-right: 1rem;
+				user-select: none;
+				background-color: var(--mdc-theme-primary);
+			}
+
+			:global(.domain-name) {
+				font-weight: bold;
+				margin-bottom: 0.5rem;
+				overflow-x: visible;
+			}
+
+			:global(.domain-date) {
+				font-size: 0.8rem;
+				opacity: 0.7;
+			}
 		}
 	}
 
