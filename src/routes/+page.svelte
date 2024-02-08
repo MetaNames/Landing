@@ -262,10 +262,6 @@
 	.recent-domains {
 		margin-top: 4rem;
 
-		h5 {
-			margin-bottom: 1rem;
-		}
-
 		.content {
 			color: var(--mdc-theme-on-primary);
 			:global(.domain) {
