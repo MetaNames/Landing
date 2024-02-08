@@ -199,7 +199,7 @@
 		align-items: center;
 		margin: 0 0.5rem;
 
-		@media only screen and (max-width: 600px) {
+		@media only screen and (max-width: 768px) {
 			flex-direction: column;
 		}
 
@@ -213,7 +213,7 @@
 			border-radius: 0.5rem;
 			font-size: small;
 
-			@media only screen and (max-width: 600px) {
+			@media only screen and (max-width: 768px) {
 				margin-bottom: 1rem;
 				width: 100%;
 			}
@@ -242,7 +242,7 @@
 	}
 
 	.generate-buttons {
-		@media only screen and (max-width: 600px) {
+		@media only screen and (max-width: 768px) {
 			display: flex;
 			justify-content: space-evenly;
 			flex-direction: column;
