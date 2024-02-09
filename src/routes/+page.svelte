@@ -12,14 +12,12 @@
 	import OpenUrlButton from './OpenUrlButton.svelte';
 	import Section from './Section.svelte';
 	import Counter from './Counter.svelte';
-	import { browser } from '$app/environment';
 	import { formatDistanceToNow } from 'date-fns';
 	import { metaNamesAppUrl } from '$lib';
 	import { writable } from 'svelte/store';
 
 	let randomMetaName: RandomMetaName;
 	let generatedName: string;
-	let innerWidth: number = browser ? window.innerWidth : 0;
 	let interval: NodeJS.Timeout;
 
 	const stats = writable({
@@ -29,14 +27,6 @@
 	});
 	const recordClasses = ['wallet address', 'social handles', 'website URL', 'bio', 'avatar'];
 	let recordClass: string = recordClasses[0];
-
-	$: isDesktop = innerWidth > 768;
-
-	if (browser) {
-		window.addEventListener('resize', () => {
-			innerWidth = window.innerWidth;
-		});
-	}
 
 	onMount(async () => {
 		interval = setInterval(() => {
