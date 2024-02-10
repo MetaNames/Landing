@@ -86,8 +86,6 @@
 			<div class="box-content left">
 				{#if $stats.domainCount > 0}
 					<Counter count={$stats.domainCount} />
-				{:else}
-					0
 				{/if}
 			</div>
 			Meta Names Registered
@@ -96,8 +94,6 @@
 			<div class="box-content left">
 				{#if $stats.ownerCount > 0}
 					<Counter count={$stats.ownerCount} />
-				{:else}
-					0
 				{/if}
 			</div>
 			Unique Wallets
