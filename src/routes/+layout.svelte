@@ -34,7 +34,7 @@
 		</Section>
 
 		<Section align="end" toolbar>
-			<OpenAppButton color="primary" class="btn-primary-on-card" variant="outlined" />
+			<OpenAppButton color="primary" class="btn-primary-on-card mr-1" variant="outlined" />
 		</Section>
 	</Row>
 </TopAppBar>
