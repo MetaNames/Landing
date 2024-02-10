@@ -1,4 +1,5 @@
 <script>
+	import { metaNamesAppUrl } from '$lib';
 	import Logo from './Logo.svelte';
 </script>
 
@@ -8,7 +9,7 @@
 		<span>Meta Names</span>
 	</div>
 	<div class="links">
-		<a href="https://app.metanames.app" target="_blank">App</a>
+		<a href={metaNamesAppUrl} target="_blank">App</a>
 		<a href="https://t.me/mpc_metanames" target="_blank">Telegram</a>
 		<a href="https://x.com/metanames_" target="_blank">Twitter</a>
 		<a href="https://github.com/metanames" target="_blank">GitHub</a>
