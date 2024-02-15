@@ -1645,10 +1645,10 @@
     focus-trap "^7.5.2"
     nanoid "^4.0.2"
 
-"@metanames/sdk@^5.4.1":
-  version "5.4.1"
-  resolved "https://registry.yarnpkg.com/@metanames/sdk/-/sdk-5.4.1.tgz#3b35bcfb22f043401dc297c97bdb22903119f229"
-  integrity sha512-dzJQIz8CSjLC5Yih5z2VOflO/Hjv2Mvyr4fkqT7XQH4AIlpbRK/l02FrCxj1ojNLoVHFHjYD5M0nEeBDiN1HRw==
+"@metanames/sdk@^5.5.0":
+  version "5.5.0"
+  resolved "https://registry.yarnpkg.com/@metanames/sdk/-/sdk-5.5.0.tgz#3938d91d0b9f5cb9964ff4a48df6a418075ce6e1"
+  integrity sha512-REbeTlqwT1N9kxbX2fxxQ4w0VaaNYzg13Mx/dSnwUB3McoD2XF7zFxtUQ/TsiTakTM+0UJ+mpth+8OerF1lixQ==
   dependencies:
     "@partisiablockchain/abi-client" "^3.30.0"
     "@secata-public/bitmanipulation-ts" "^3.0.6"
