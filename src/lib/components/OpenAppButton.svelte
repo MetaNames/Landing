@@ -3,8 +3,6 @@
 
 	import { metaNamesAppUrl } from '$lib';
 
-	import '../styles/app.scss';
-
 	let klass: string = '';
 	export { klass as class };
 	export let color: 'primary' | 'secondary' = 'primary';

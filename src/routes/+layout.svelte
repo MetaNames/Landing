@@ -5,11 +5,13 @@
 	import Section from '@smui/top-app-bar/src/Section.svelte';
 	import TopAppBar, { Row, Title } from '@smui/top-app-bar';
 
-	import OpenAppButton from './OpenAppButton.svelte';
-	import Footer from './Footer.svelte';
-	import Logo from './Logo.svelte';
+	import OpenAppButton from '../lib/components/OpenAppButton.svelte';
+	import Footer from '../lib/components/Footer.svelte';
+	import Logo from '../lib/components/Logo.svelte';
 
 	import 'material-icons/iconfont/filled.css';
+
+	import '../styles/app.scss';
 
 	inject({ mode: dev ? 'development' : 'production' });
 </script>

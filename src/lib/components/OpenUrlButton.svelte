@@ -1,8 +1,6 @@
 <script lang="ts">
 	import Button, { Icon } from '@smui/button';
 
-	import '../styles/app.scss';
-
 	let klass: string = '';
 	export { klass as class };
 	export let color: 'primary' | 'secondary' = 'primary';

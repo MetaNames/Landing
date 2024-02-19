@@ -10,11 +10,11 @@
 	import Button from '@smui/button/src/Button.svelte';
 	import Card, { PrimaryAction } from '@smui/card';
 	import { Icon } from '@smui/icon-button';
-	import Counter from './Counter.svelte';
-	import OpenAppButton from './OpenAppButton.svelte';
-	import OpenUrlButton from './OpenUrlButton.svelte';
-	import RandomMetaName from './RandomMetaName.svelte';
-	import Section from './Section.svelte';
+	import Counter from '../lib/components/Counter.svelte';
+	import OpenAppButton from '../lib/components/OpenAppButton.svelte';
+	import OpenUrlButton from '../lib/components/OpenUrlButton.svelte';
+	import RandomMetaName from '../lib/components/RandomMetaName.svelte';
+	import Section from '../lib/components/Section.svelte';
 
 	let randomMetaName: RandomMetaName;
 	let generatedName: string;
@@ -124,10 +124,10 @@
 	<h3>Recently registered domains</h3>
 	<p>Check out the freshest domains just claimed on Meta Names!</p>
 	<p>
-		Did you just register a domain? <a
+		Did you just register a domain? Brag your new Meta Name in our <a
 			href="https://t.me/mpc_metanames"
 			target="_blank"
-			rel="noopener noreferrer"><b>Brag your new Meta Name in our community channel</b></a
+			rel="noopener noreferrer">community channel</a
 		>
 	</p>
 	<div class="recent-domains">
@@ -183,7 +183,7 @@
 		a developer-friendly toolkit.
 		<br />
 		<a href="https://t.me/mpc_metanames" target="_blank" rel="noopener noreferrrer"
-			><b>Join our supportive community</b></a
+			>Join our supportive community</a
 		>, access detailed documentation, and transform your applications with the power of Meta Names.
 		<br />
 		Your journey into the future of web3 starts here.
@@ -319,6 +319,7 @@
 
 	a {
 		text-decoration: none;
+		font-weight: bold;
 	}
 
 	.record-class {

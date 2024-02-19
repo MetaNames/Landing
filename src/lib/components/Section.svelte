@@ -1,6 +1,4 @@
 <script lang="ts">
-	import '../styles/app.scss';
-
 	export let type: 'primary' | 'secondary' = 'primary';
 	export let color: 'primary' | 'secondary' = type;
 
