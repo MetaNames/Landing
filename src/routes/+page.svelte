@@ -5,7 +5,7 @@
 	import { onDestroy, onMount } from 'svelte';
 	import { writable } from 'svelte/store';
 	import { fade } from 'svelte/transition';
-	import partisiaLogo from '$lib/assets/images/partisia-logo.png'
+	import partisiaLogo from '$lib/assets/images/partisia-logo.png';
 
 	import Button from '@smui/button/src/Button.svelte';
 	import Card, { PrimaryAction } from '@smui/card';
@@ -103,16 +103,29 @@
 
 <Section type="primary" color="secondary">
 	<h3 class="mt-0">The only <span class="purple">name</span> you need</h3>
-	<h6>
+	<p>
 		Register your domain and subdomains effortlessly with <b>Meta Names</b>, the cutting-edge web3
 		domain name system for
 		<a href="https://partisiablockchain.com/" target="_blank" rel="noopener noreferrer"
 			>Partisia Blockchain</a
 		>.
-		<br />
-		Unlock a world of possibilities by conveniently saving various information within each domain: manage
-		wallet addresses, social handles, website links, and more.
-	</h6>
+	</p>
+	<p>
+		Create your unique Meta Names profile using your personal domain, allowing you to store and
+		manage a wide array of information all in one place.
+	</p>
+	<p>
+		With Meta Names, you can effortlessly organize your wallet addresses, social media handles
+		(including Discord and Twitter), website links, and much more under your unique domain.
+	</p>
+</Section>
+
+<Section type="secondary" color="primary">
+	<h3>Recently registered domains</h3>
+	<p>
+		Check out the freshest domains just claimed on Meta Names! Ready to make your mark? Register
+		yours today!
+	</p>
 	<div class="recent-domains">
 		<div class="content">
 			<Marqueeck>
@@ -131,25 +144,24 @@
 		</div>
 	</div>
 </Section>
-
-<Section type="secondary" color="primary">
+<Section type="secondary" color="secondary">
 	<h3>Generate your Meta Name</h3>
-	<h6 class="card-subtitle">
-		<span>What about minting</span>
+	<p>
+		Running low on ideas? No worries, we've got your back!
+		<br />
+		How about snagging the following domain?
+	</p>
+	<p>
 		<b><RandomMetaName bind:this={randomMetaName} bind:generatedName /></b>
-		<span>?</span>
-	</h6>
+	</p>
 	<div class="generate-buttons">
-		<OpenAppButton
-			color="primary"
-			variant="outlined"
-			class="btn-primary-on-card mb-1"
-			path="/register/{generatedName}">Register now</OpenAppButton
+		<OpenAppButton color="primary" variant="raised" class="mb-1" path="/register/{generatedName}"
+			>Register now</OpenAppButton
 		>
 		<Button
-			class="btn-primary-on-card mb-1"
+			class="mb-1"
 			color="primary"
-			variant="outlined"
+			variant="raised"
 			on:click={() => randomMetaName.regenerate()}
 		>
 			<Icon class="material-icons">refresh</Icon>
@@ -158,12 +170,15 @@
 	</div>
 </Section>
 
-<Section type="primary" color="secondary">
-	<h3>Integrate with <span class="purple">Meta Names SDK</span></h3>
-	<h6 class="card-subtitle">
+<Section type="primary" color="primary">
+	<h3>Integrate with Meta Names SDK</h3>
+	<p>
 		Discover the ease of web3 domain management with <b>Meta Names SDK</b> for
-		<a href="https://partisiablockchain.com/" target="_blank" rel="noopener noreferrer"
-			>Partisia Blockchain</a
+		<a
+			class="on-primary"
+			href="https://partisiablockchain.com/"
+			target="_blank"
+			rel="noopener noreferrer">Partisia Blockchain</a
 		>.
 		<br />
 		Our platform offers simple domain and subdomain registration, versatile information embedding, and
@@ -174,7 +189,7 @@
 		>, access detailed documentation, and transform your applications with the power of Meta Names.
 		<br />
 		Your journey into the future of web3 starts here.
-	</h6>
+	</p>
 	<OpenUrlButton
 		color="primary"
 		variant="outlined"
@@ -241,10 +256,6 @@
 		}
 	}
 
-	.card-subtitle {
-		margin-bottom: 1rem;
-	}
-
 	.generate-buttons {
 		@media only screen and (max-width: 768px) {
 			display: flex;
@@ -267,13 +278,11 @@
 		margin-top: 4rem;
 
 		.content {
-			color: var(--mdc-theme-on-primary);
 			overflow-x: hidden;
 
 			:global(.domain) {
 				margin-right: 1rem;
 				user-select: none;
-				background-color: var(--mdc-theme-primary);
 			}
 
 			.domain-name {
@@ -299,10 +308,18 @@
 
 	.subtitle {
 		font-size: 0.75rem;
+	}
 
-		a {
-			color: var(--mdc-theme-text-on-primary);
-			text-decoration: none;
+	a {
+		color: var(--mdc-theme-text-on-primary);
+		text-decoration: none;
+
+		&.on-primary {
+			color: var(--mdc-theme-text-secondary-on-dark);
+		}
+
+		&:visited {
+			color: var(--mdc-theme-text-secondary-on-dark);
 		}
 	}
 
@@ -318,5 +335,11 @@
 		color: var(--mdc-theme-primary);
 
 		white-space: nowrap;
+	}
+
+	p {
+		font-size: x-large;
+		line-height: 32pt;
+		font-weight: 400;
 	}
 </style>

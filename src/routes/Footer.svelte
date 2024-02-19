@@ -3,7 +3,7 @@
 	import Logo from './Logo.svelte';
 </script>
 
-<footer class="card-primary">
+<footer class="card-secondary">
 	<div class="logo">
 		<Logo color="light" />
 		<span>Meta Names</span>
