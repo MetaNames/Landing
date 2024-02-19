@@ -86,14 +86,18 @@
 			<div class="box-content left">
 				{#if $stats.domainCount > 0}
 					<Counter count={$stats.domainCount} />
+				{:else}
+					<div class="placeholder" />
 				{/if}
 			</div>
 			Meta Names Registered
 		</div>
 		<div class="box">
-			<div class="box-content left">
+			<div class="box-content left" >
 				{#if $stats.ownerCount > 0}
 					<Counter count={$stats.ownerCount} />
+				{:else}
+					<div class="placeholder" />
 				{/if}
 			</div>
 			Unique Wallets
@@ -244,6 +248,8 @@
 				padding: 0 0.5rem;
 
 				&.left {
+					min-height: 1rem;
+					min-width: 2rem;
 					margin-right: 0.5rem;
 				}
 

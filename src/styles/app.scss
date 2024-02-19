@@ -20,3 +20,23 @@
 .card-secondary {
   background-color: var(--mdc-theme-background);
 }
+
+/* Define the pulsing animation */
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.placeholder {
+  width: 100%;
+  background-color: #fff;
+  animation: pulse 1s infinite;
+  border-radius: 5px;
+}
