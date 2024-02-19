@@ -52,7 +52,7 @@
 <Section>
 	<h1 class="title">META NAMES</h1>
 	<h7 class="subtitle"
-		>Powered by <a href="https://partisiablockchain.com/" target="_blank" rel="noopener noreferrer"
+		>Powered by <a class="no-decoration" href="https://partisiablockchain.com/" target="_blank" rel="noopener noreferrer"
 			>Partisia Blockchain</a
 		></h7
 	>
@@ -312,20 +312,15 @@
 
 	a {
 		color: var(--mdc-theme-text-on-primary);
-		text-decoration: none;
+		font-weight: bold;
 
-		&.on-primary {
-			color: var(--mdc-theme-text-secondary-on-dark);
+		&.no-decoration {
+			text-decoration: none;
 		}
 
 		&:visited {
 			color: var(--mdc-theme-text-secondary-on-dark);
 		}
-	}
-
-	a {
-		text-decoration: none;
-		font-weight: bold;
 	}
 
 	.record-class {
