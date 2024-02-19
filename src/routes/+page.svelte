@@ -1,20 +1,20 @@
 <script lang="ts">
-	import { onDestroy, onMount } from 'svelte';
-	import { fade } from 'svelte/transition';
+	import { metaNamesAppUrl } from '$lib';
 	import Marqueeck from '@arisbh/marqueeck';
+	import { formatDistanceToNow } from 'date-fns';
+	import { onDestroy, onMount } from 'svelte';
+	import { writable } from 'svelte/store';
+	import { fade } from 'svelte/transition';
+	import partisiaLogo from '$lib/assets/images/partisia-logo.png'
 
 	import Button from '@smui/button/src/Button.svelte';
-	import { Icon } from '@smui/icon-button';
 	import Card, { PrimaryAction } from '@smui/card';
-
-	import OpenAppButton from './OpenAppButton.svelte';
-	import RandomMetaName from './RandomMetaName.svelte';
-	import OpenUrlButton from './OpenUrlButton.svelte';
-	import Section from './Section.svelte';
+	import { Icon } from '@smui/icon-button';
 	import Counter from './Counter.svelte';
-	import { formatDistanceToNow } from 'date-fns';
-	import { metaNamesAppUrl } from '$lib';
-	import { writable } from 'svelte/store';
+	import OpenAppButton from './OpenAppButton.svelte';
+	import OpenUrlButton from './OpenUrlButton.svelte';
+	import RandomMetaName from './RandomMetaName.svelte';
+	import Section from './Section.svelte';
 
 	let randomMetaName: RandomMetaName;
 	let generatedName: string;
@@ -78,7 +78,7 @@
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					<img src="/images/partisia-logo.svg" alt="Partisia Blockchain" />
+					<img src={partisiaLogo} alt="Partisia Blockchain" />
 				</a>
 			</div>
 		</div>
