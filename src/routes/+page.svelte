@@ -122,7 +122,14 @@
 
 <Section type="secondary" color="primary">
 	<h3>Recently registered domains</h3>
-	<p>Check out the freshest domains just claimed on Meta Names! Ready to make your mark?</p>
+	<p>Check out the freshest domains just claimed on Meta Names!</p>
+	<p>
+		Did you just register a domain? <a
+			href="https://t.me/mpc_metanames"
+			target="_blank"
+			rel="noopener noreferrer"><b>Brag your new Meta Name in our community channel</b></a
+		>
+	</p>
 	<div class="recent-domains">
 		<div class="content">
 			<Marqueeck>
@@ -170,19 +177,13 @@
 <Section type="primary" color="primary">
 	<h3>Integrate with Meta Names SDK</h3>
 	<p>
-		Discover the ease of web3 domain management with <b>Meta Names SDK</b> for
-		<a
-			class="on-primary"
-			href="https://partisiablockchain.com/"
-			target="_blank"
-			rel="noopener noreferrer">Partisia Blockchain</a
-		>.
+		Discover the ease of web3 domain management with <b>Meta Names SDK</b> for Partisia Blockchain.
 		<br />
 		Our platform offers simple domain and subdomain registration, versatile information embedding, and
 		a developer-friendly toolkit.
 		<br />
 		<a href="https://t.me/mpc_metanames" target="_blank" rel="noopener noreferrrer"
-			>Join our supportive community</a
+			><b>Join our supportive community</b></a
 		>, access detailed documentation, and transform your applications with the power of Meta Names.
 		<br />
 		Your journey into the future of web3 starts here.
