@@ -102,7 +102,7 @@
 </Section>
 
 <Section type="primary" color="secondary">
-	<h3 class="mt-0">The only <span class="purple">name</span> you need</h3>
+	<h3 class="mt-0">The only name you need</h3>
 	<p>
 		Register your domain and subdomains effortlessly with <b>Meta Names</b>, the cutting-edge web3
 		domain name system for
@@ -122,10 +122,7 @@
 
 <Section type="secondary" color="primary">
 	<h3>Recently registered domains</h3>
-	<p>
-		Check out the freshest domains just claimed on Meta Names! Ready to make your mark? Register
-		yours today!
-	</p>
+	<p>Check out the freshest domains just claimed on Meta Names! Ready to make your mark?</p>
 	<div class="recent-domains">
 		<div class="content">
 			<Marqueeck>
@@ -296,10 +293,6 @@
 				opacity: 0.7;
 			}
 		}
-	}
-
-	.purple {
-		color: var(--mdc-theme-primary);
 	}
 
 	.title {
