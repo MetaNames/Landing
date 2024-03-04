@@ -1,5 +1,6 @@
 import { sentrySvelteKit } from "@sentry/sveltekit";
 import { sveltekit } from '@sveltejs/kit/vite';
+import { nodePolyfills } from 'vite-plugin-node-polyfills';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
@@ -8,5 +9,5 @@ export default defineConfig({
             org: "metanames",
             project: "landing"
         }
-    }), sveltekit()],
+    }), sveltekit(), nodePolyfills()],
 });
