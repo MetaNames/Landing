@@ -1645,13 +1645,14 @@
     focus-trap "^7.5.2"
     nanoid "^4.0.2"
 
-"@metanames/sdk@^5.6.1":
-  version "5.6.1"
-  resolved "https://registry.yarnpkg.com/@metanames/sdk/-/sdk-5.6.1.tgz#6abb053b913f235ccde8e8863faa9c926dc1f14e"
-  integrity sha512-mwveF+Hhi3svKrjNofPbWs3hQjFUcJwnJjY+xyO59aaxs5HhFZCwqH0Tx42KFInNue2mC1HqPEcfAn/EBc7Xzw==
+"@metanames/sdk@^5.9.3":
+  version "5.9.3"
+  resolved "https://registry.yarnpkg.com/@metanames/sdk/-/sdk-5.9.3.tgz#3b07d8e38ccab1588f0fe3a97216d27a16d764af"
+  integrity sha512-TfiwClIZuER1gIC0+hGGlKdkfNi3s+oyslJc4U05ml/wBsUTT7oR0X3YUuKt9hRXIB3CyJZ72wHhkx5fG7mkGQ==
   dependencies:
     "@partisiablockchain/abi-client" "^3.30.0"
     "@secata-public/bitmanipulation-ts" "^3.0.6"
+    axios "^1.6.7"
     partisia-blockchain-applications-crypto "^1.0.22"
     partisia-blockchain-applications-rpc "^1.0.12"
     partisia-blockchain-applications-sdk "^0.1.2"
@@ -2908,7 +2909,7 @@ axe-core@=4.7.0:
   resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-4.7.0.tgz#34ba5a48a8b564f67e103f0aa5768d76e15bbbbf"
   integrity sha512-M0JtH+hlOL5pLQwHOLNYZaXuhqmvS8oExsqB1SBYgA4Dk7u/xx+YdGHXaK5pyUfed5mYXdlYiphWq3G8cRi5JQ==
 
-axios@^1.6.2:
+axios@^1.6.2, axios@^1.6.7:
   version "1.6.7"
   resolved "https://registry.yarnpkg.com/axios/-/axios-1.6.7.tgz#7b48c2e27c96f9c68a2f8f31e2ab19f59b06b0a7"
   integrity sha512-/hDJGff6/c7u0hDkvkGxR/oy6CbCs8ziCsC7SqmhjfozqiJGc8Z11wrv9z9lYfY4K8l+H9TpjcMDX0xOZmx+RA==

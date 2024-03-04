@@ -46,7 +46,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@metanames/sdk": "^5.6.1",
+		"@metanames/sdk": "^5.9.3",
 		"@sentry/sveltekit": "^7.100.1",
 		"@vercel/analytics": "^1.1.1",
 		"date-fns": "^3.3.1"
