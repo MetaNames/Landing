@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { MetaNamesConfig } from '$lib';
 	import {
 		uniqueNamesGenerator,
 		adjectives,
@@ -35,7 +36,7 @@
 		generatedName = generateRandomName();
 	};
 
-	$: generatedMetaName = generatedName + '.meta';
+	$: generatedMetaName = `${generatedName}.${MetaNamesConfig.tld}`
 </script>
 
 <span>{generatedMetaName}</span>
