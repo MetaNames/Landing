@@ -12,6 +12,3 @@ vite.config.ts.timestamp-*
 # Ignore generated theme files
 /src/styles/theme/*
 !/src/styles/theme/.keep
-
-# Sentry Config File
-.sentryclirc

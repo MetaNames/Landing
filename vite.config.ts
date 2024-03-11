@@ -1,13 +1,7 @@
-import { sentrySvelteKit } from "@sentry/sveltekit";
 import { sveltekit } from '@sveltejs/kit/vite';
 import { nodePolyfills } from 'vite-plugin-node-polyfills';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-	plugins: [sentrySvelteKit({
-        sourceMapsUploadOptions: {
-            org: "metanames",
-            project: "landing"
-        }
-    }), sveltekit(), nodePolyfills()],
+	plugins: [sveltekit(), nodePolyfills()],
 });
